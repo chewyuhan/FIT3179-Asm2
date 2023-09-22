@@ -15,13 +15,35 @@
 
   <div id="choropleth_map"></div>
 
+  
+  <div id="trend_line"></div>
+
   <script type="text/javascript">
-    var spec2 = "globalterrorismindex.json";
-    console.log("Before vegaEmbed");
-    vegaEmbed('#choropleth_map', spec2).then(function (result) {
-      console.log("Success")
-      // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
-    }).catch(console.error);
+    var spec1 = "js/map_vis.json";
+    var spec2 = "js/trend.json";
+
+    vegaEmbed('#choropleth_map', spec1, {
+      actions: false
+    });
+
+    vegaEmbed('#trend_line', spec2, {
+      actions: false
+    }).then((result) => {
+      
+    }).catch((err) => {
+      
+    });
+
+    vegaEmbed('#choropleth_map', spec1, {
+      actions: false
+    }).then((result) => {
+      
+    }).catch((err) => {
+      
+    });
+
+
+
   </script>
 
 </body>
