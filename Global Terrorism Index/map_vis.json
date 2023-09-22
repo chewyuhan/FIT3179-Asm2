@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Global Terrorism Index (2012-2022)",
-    "width": "container",
-    "height": "container",
+    "width": "700",
+    "height": "400",
     "projection": {
         "type": "equalEarth"
     },
@@ -38,7 +38,7 @@
     "layer": [
         {
             "data": {
-                "url": "https://raw.githubusercontent.com/chewyuhan/Week-9-Hoemwork/main/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+                "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Week_9_Homework/ne_110m_admin_0_countries.topojson",
                 "format": {
                     "type": "topojson",
                     "feature": "ne_110m_admin_0_countries"
@@ -64,7 +64,7 @@
         },
         {
             "data": {
-                "url": "https://raw.githubusercontent.com/chewyuhan/Week-9-Hoemwork/main/3_choropleth_map/data/Global%20Terrorism%20Index%202023.csv",
+                "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Week_9_Homework/Global%20Terrorism%20Index%202023.csv",
                 "format": {
                     "type": "csv"
                 }
@@ -74,7 +74,7 @@
                     "lookup": "Country",
                     "from": {
                         "data": {
-                            "url": "https://raw.githubusercontent.com/chewyuhan/Week-9-Hoemwork/main/3_choropleth_map/js/ne_110m_admin_0_countries.topojson",
+                            "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Week_9_Homework/ne_110m_admin_0_countries.topojson",
                             "format": {
                                 "type": "topojson",
                                 "feature": "ne_110m_admin_0_countries"
@@ -116,7 +116,7 @@
                         "field": "Score",
                         "type": "quantitative",
                         "title": "Score",
-                        "format": ","
+                        "format": ".5f"
                     },
                     {
                         "field": "Year",
