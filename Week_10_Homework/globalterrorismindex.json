@@ -1,12 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Global Terrorism Index (2012-2022)",
-    "height":600,
-    "width":1000,
+    "height": 600,
+    "width": 1000,
     "projection": {
         "type": "equalEarth"
     },
-    "params": [{
+    "params": [
+        {
             "name": "Year_selection",
             "value": 2012,
             "bind": {
@@ -17,31 +18,43 @@
                 "name": "Year:  "
             }
         }
-
     ],
-    "layer": [{
+    "layer": [
+        {
             "data": {
                 "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Week_9_Homework/ne_110m_admin_0_countries.topojson",
-                "format": { "type": "topojson", "feature": "ne_110m_admin_0_countries" }
+                "format": {
+                    "type": "topojson",
+                    "feature": "ne_110m_admin_0_countries"
+                }
             },
-            "transform": [{
-                "calculate": "'Data is not available in ' + datum.properties.NAME",
-                "as": "note"
-            }],
+            "transform": [
+                {
+                    "calculate": "'Data is not available in ' + datum.properties.NAME",
+                    "as": "note"
+                }
+            ],
             "mark": {
                 "type": "geoshape",
                 "fill": "#ddd",
                 "stroke": "white",
                 "strokeWidth": 1
             },
-            "encoding": { "tooltip": { "field": "note" } }
+            "encoding": {
+                "tooltip": {
+                    "field": "note"
+                }
+            }
         },
         {
             "data": {
                 "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Week_9_Homework/Global%20Terrorism%20Index%202023.csv",
-                "format":{"type": "csv"}
+                "format": {
+                    "type": "csv"
+                }
             },
-            "transform": [{
+            "transform": [
+                {
                     "lookup": "Country",
                     "from": {
                         "data": {
@@ -55,24 +68,71 @@
                     },
                     "as": "geo"
                 },
-                { "filter": "datum.Year == Year_selection" }
+                {
+                    "filter": "datum.Year == Year_selection"
+                }
             ],
-            "mark": { "type": "geoshape", "stroke": "#fff", "strokeWidth": 0.5 },
+            "mark": {
+                "type": "geoshape",
+                "stroke": "#fff",
+                "strokeWidth": 0.5
+            },
             "encoding": {
-                "shape": { "field": "geo", "type": "geojson" },
+                "shape": {
+                    "field": "geo",
+                    "type": "geojson"
+                },
                 "color": {
                     "field": "Score",
                     "type": "quantitative"
                 },
                 "tooltip": [
-                    { "field": "Country", "type": "nominal", "title": "Country" },
+                    {
+                        "field": "Country",
+                        "type": "nominal",
+                        "title": "Country"
+                    },
+                    {
+                        "field": "Rank",
+                        "type": "quantitative",
+                        "title": "Rank",
+                        "format": ","
+                    },
                     {
                         "field": "Score",
                         "type": "quantitative",
                         "title": "Score",
                         "format": ","
                     },
-                    { "field": "Year", "type": "quantitative", "title": "Year" }
+                    {
+                        "field": "Incidents",
+                        "type": "quantitative",
+                        "title": "Incidents",
+                        "format": ","
+                    },
+                    {
+                        "field": "Fatalities",
+                        "type": "quantitative",
+                        "title": "Fatalities",
+                        "format": ","
+                    },
+                    {
+                        "field": "Injuries",
+                        "type": "quantitative",
+                        "title": "Injuries",
+                        "format": ","
+                    },
+                    {
+                        "field": "Hostages",
+                        "type": "quantitative",
+                        "title": "Hostages",
+                        "format": ","
+                    },
+                    {
+                        "field": "Year",
+                        "type": "quantitative",
+                        "title": "Year"
+                    }
                 ]
             }
         }

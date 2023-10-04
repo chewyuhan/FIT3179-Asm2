@@ -43,23 +43,66 @@
                 },
                 "tooltip": [
                     {
+                        "field": "Country",
+                        "type": "nominal",
+                        "title": "Country"
+                    },
+                    {
                         "field": "Year",
                         "type": "temporal",
                         "title": "Year",
                         "format": "%Y"
                     },
                     {
-                        "field": "Terrorist_attacks",
+                        "field": "Rank",
                         "type": "quantitative",
-                        "title": "Terrorist Attacks"
+                        "title": "Rank"
+                    },
+                    {
+                        "field": "Score",
+                        "type": "quantitative",
+                        "title": "Score"
+                    },
+                    {
+                        "field": "Incidents",
+                        "type": "quantitative",
+                        "title": "Incidents"
+                    },
+                    {
+                        "field": "Injuries",
+                        "type": "quantitative",
+                        "title": "Injuries"
+                    },
+                    {
+                        "field": "Hostages",
+                        "type": "quantitative",
+                        "title": "Hostages"
                     }
                 ],
                 "size": {
                     "value": 3
                 }
             }
+        },
+        {
+            "mark": "circle",
+            "encoding": {
+                "y": {
+                    "field": "Terrorist_attacks",
+                    "type": "quantitative",
+                    "aggregate": "max"
+                },
+                "color": {
+                    "value": "red"
+                },
+                "size": {
+                    "value": 200
+                },
+                "opacity": {
+                    "value": 0.7
+                }
+            }
         }
-
     ],
     "config": {
         "text": {
