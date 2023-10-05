@@ -14,26 +14,24 @@
 <body>
 
   <div id="choropleth_map"></div>
+
   <div id="trend_line"></div>
 
   <script type="text/javascript">
     var spec1 = "globalterrorismindex.json";
     var spec2 = "trend.json";
 
-    vegaEmbed('#choropleth_map', spec1, {
-      actions: false
-    });
 
-    vegaEmbed('#trend_line', spec2, {
-      actions: false
+
+
+    vegaEmbed('#choropleth_map', spec1, {
     }).then((result) => {
       
     }).catch((err) => {
       
     });
 
-    vegaEmbed('#choropleth_map', spec1, {
-      actions: false
+    vegaEmbed('#trend_line', spec2, {
     }).then((result) => {
       
     }).catch((err) => {

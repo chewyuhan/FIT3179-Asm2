@@ -1,118 +1,150 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Terrorist Attack Trend by Year (2012-2021)",
-    "width": 800,
-    "height": 400,
+    "width": 1000,
+    "height": 600,
+    "title": "Terrorist Attacks per Country (2012-2021)",
     "data": {
         "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Global%20Terrorism%20Index/data/Merge_Global_Terrorism_Index.csv"
     },
+    "params": [
+        {
+            "name": "Terrorist_attacks",
+            "value": 0,
+            "bind": {
+                "input": "range",
+                "min": 0,
+                "max": 2000,
+                "step": 250,
+                "name": "Terrorist Attacks: "
+            }
+        },
+        {
+            "name": "Region_selection",
+            "bind": {
+                "input": "select",
+                "options": [
+                    null,
+                    "Americas",
+                    "Europe",
+                    "Africa",
+                    "Asia",
+                    "Oceania"
+                ],
+                "labels": [
+                    "Show All",
+                    "Americas",
+                    "Europe",
+                    "Africa",
+                    "Asia",
+                    "Oceania"
+                ],
+                "name": "Region Selection: "
+            }
+        }
+    ],
+    "transform": [
+        {
+            "filter": "datum.Terrorist_attacks > Terrorist_attacks"
+        },
+        {
+            "filter": "Region_selection == null || datum.Region == Region_selection"
+        }
+    ],
     "encoding": {
         "x": {
             "field": "Year",
-            "type": "temporal",
+            "type": "ordinal",
+            "title": "Year",
             "axis": {
-                "tickCount": 10,
-                "format": "%Y",
-                "values": [
-                    "2012",
-                    "2013",
-                    "2014",
-                    "2015",
-                    "2016",
-                    "2017",
-                    "2018",
-                    "2019",
-                    "2020",
-                    "2021"
-                ]
+                "tickCount": 10
+            }
+        },
+        "y": {
+            "field": "Terrorist_attacks",
+            "type": "quantitative",
+            "axis": {
+                "tickCount": 6
             }
         }
     },
     "layer": [
         {
-            "mark": "line",
+            "selection": {
+                "region_highlight": {
+                    "type": "multi",
+                    "fields": [
+                        "Region"
+                    ],
+                    "bind": "legend"
+                }
+            },
+            "mark": "circle",
             "encoding": {
-                "y": {
+                "size": {
                     "field": "Terrorist_attacks",
                     "type": "quantitative",
-                    "aggregate": "mean"
+                    "scale": {
+                        "type": "threshold",
+                        "domain": [
+                            500,
+                            1000,
+                        ],
+                        "range": [
+                            100,
+                            500,
+                            1000
+                        ]
+                    },
+                    "legend": {
+                        "format": ".1s"
+                    }
                 },
                 "color": {
-                    "field": "Country",
+                    "field": "Region",
                     "type": "nominal"
+                },
+                "opacity": {
+                    "condition": {
+                        "selection": "region_highlight",
+                        "value": 0.6
+                    },
+                    "value": 0
                 },
                 "tooltip": [
                     {
                         "field": "Country",
-                        "type": "nominal",
-                        "title": "Country"
+                        "type": "nominal"
                     },
                     {
-                        "field": "Year",
-                        "type": "temporal",
-                        "title": "Year",
-                        "format": "%Y"
-                    },
-                    {
-                        "field": "Rank",
-                        "type": "quantitative",
-                        "title": "Rank"
-                    },
-                    {
-                        "field": "Score",
-                        "type": "quantitative",
-                        "title": "Score"
+                        "field": "Terrorist_attacks",
+                        "type": "quantitative"
                     },
                     {
                         "field": "Incidents",
                         "type": "quantitative",
-                        "title": "Incidents"
+                        "title": "Incidents",
+                        "format": ","
+                    },
+                    {
+                        "field": "Fatalities",
+                        "type": "quantitative",
+                        "title": "Fatalities",
+                        "format": ","
                     },
                     {
                         "field": "Injuries",
                         "type": "quantitative",
-                        "title": "Injuries"
+                        "title": "Injuries",
+                        "format": ","
                     },
                     {
                         "field": "Hostages",
                         "type": "quantitative",
-                        "title": "Hostages"
+                        "title": "Hostages",
+                        "format": ","
                     }
-                ],
-                "size": {
-                    "value": 3
-                }
-            }
-        },
-        {
-            "mark": "circle",
-            "encoding": {
-                "y": {
-                    "field": "Terrorist_attacks",
-                    "type": "quantitative",
-                    "aggregate": "max"
-                },
-                "color": {
-                    "value": "red"
-                },
-                "size": {
-                    "value": 200
-                },
-                "opacity": {
-                    "value": 0.7
-                }
+                ]
             }
         }
-    ],
-    "config": {
-        "text": {
-            "align": "right",
-            "dx": -5,
-            "dy": 5
-        },
-        "legend": {
-            "columns": 5,
-            "symbolLimit": 153
-        }
-    }
+    ]
 }
