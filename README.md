@@ -6,4 +6,6 @@ https://chewyuhan.github.io/FIT3179-Asm2/Week_9_Homework/
 Week 10
 https://chewyuhan.github.io/FIT3179-Asm2/Week_10_Homework/
 
+Assignment 2
+https://chewyuhan.github.io/FIT3179-Asm2/Assignment2/
 
