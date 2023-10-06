@@ -2,27 +2,69 @@
 <html>
 
 <head>
-  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
 
-  <!-- CSS file -->
+  <!-- Import pure.css -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/purecss@2.1.0/build/pure-min.css" 
+        integrity="sha384-yHIFVG6ClnONEA5yB5DJXfW2/KC173DIQrYoZMEtBvGzmf0PKiGyNEqe9N6BNDBH" crossorigin="anonymous">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" type="text/css" href="styles.css" media="all">
 </head>
 
-<body>
+<body class="page">
+  <div>
+    <header>
+      <h1>Data Visualizations: Global Terrorism Insights (2012-2022)</h1>
+    </header>
+    <div class="map">
+      <div class="des">
+      <h1>Geographical Distribution on Global Terrorist Index</h1>
+      </div>
+    <div class="container">
+      <div class="des">
+        <p>
+          In the turbulent narrative of global terrorism spanning the years <strong>2012 to 2022</strong>, our 
+          interactive map unveils a chilling tale. <br><br>
+          
+          <em>Afghanistan, Iraq, and Syria</em> emerge as perennial protagonists in this saga of unrest, their consistent high 
+          scores painting a vivid picture of enduring challenges.<br><br>
+      
+          Users can play with the <strong>Year Slider</strong> to control the year that shows an interesting trend regarding the Global Terrorist Score.
+        </p>
 
-  <div id="choropleth_map"></div>
+      </div>
+      <div id="choropleth_map" class="vis-container"></div>
+    </div>
+  </div>
+  <div class="bubble-plot">
+    <div class="des">
+    <h1>Global Terrorist Attack Per Country</h1>
+  </div>
+    <div class="container">
+    <div id="bubble" class="vis-container"></div>
+    <!-- Add your paragraph content here -->
+    <div class="des">
+      <p>
+        The data on terrorist attacks highlights a <strong>persistent threat</strong> in Asia, 
+        particularly in countries like <em>Afghanistan, Iraq, Nigeria, Pakistan, Somalia, and Syria</em>. 
+        Fluctuations in attack frequency indicate <strong>evolving geopolitical dynamics</strong>. <em>Iraq, Afghanistan, Nigeria, 
+          and Syria</em> consistently face high <strong>fatalities and injuries</strong>, emphasizing the severe impact of terrorism. 
+          Hostage situations, notably in <em>Afghanistan, Iraq, and Syria</em>, add complexity to security challenges. <strong>Emerging hotspots</strong> 
+          like <em>Mali, Burkina Faso, and Mozambique</em> signify the evolving global terrorism landscape. Despite international efforts, sustained collaboration 
+          is crucial to address root causes and effectively combat terrorism globally.
 
-  <div id="trend_line"></div>
+</p>
+    </div>
+    </div>
+  </div>
+  </div>
 
   <script type="text/javascript">
     var spec1 = "globalterrorismindex.json";
-    var spec2 = "trend.json";
-
-
-
+    var spec2 = "Terrorist_attack_per_country_bubble.json";
 
     vegaEmbed('#choropleth_map', spec1, {
     }).then((result) => {
@@ -31,16 +73,14 @@
       
     });
 
-    vegaEmbed('#trend_line', spec2, {
+    vegaEmbed('#bubble', spec2, {
     }).then((result) => {
       
     }).catch((err) => {
       
     });
 
-
-
   </script>
-
 </body>
+
 </html>

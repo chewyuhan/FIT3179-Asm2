@@ -1,7 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Global Terrorism Index (2012-2022)",
-    "height": 600,
+    "height": 500,
     "width": 1000,
     "projection": {
         "type": "equalEarth"
@@ -48,7 +47,7 @@
         },
         {
             "data": {
-                "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Week_9_Homework/Global%20Terrorism%20Index%202023.csv",
+                "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Global%20Terrorism%20Index/data/Global%20Terrorism%20Index%202023.csv",
                 "format": {
                     "type": "csv"
                 }

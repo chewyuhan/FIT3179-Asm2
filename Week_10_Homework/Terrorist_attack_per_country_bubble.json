@@ -1,10 +1,9 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 1000,
-    "height": 600,
-    "title": "Terrorist Attacks per Country (2012-2021)",
+    "width": 900,
+    "height": 500,
     "data": {
-        "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Global%20Terrorism%20Index/data/Merge_Global_Terrorism_Index.csv"
+        "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Global%20Terrorism%20Index/data/Global%20Terrorism%20Index%202023.csv"
     },
     "params": [
         {
@@ -80,6 +79,17 @@
             },
             "mark": "circle",
             "encoding": {
+                "color": {
+                    "field": "Region",
+                    "type": "nominal"
+                },
+                "opacity": {
+                    "condition": {
+                        "selection": "region_highlight",
+                        "value": 0.6
+                    },
+                    "value": 0.1
+                },
                 "size": {
                     "field": "Terrorist_attacks",
                     "type": "quantitative",
@@ -87,7 +97,7 @@
                         "type": "threshold",
                         "domain": [
                             500,
-                            1000,
+                            1000
                         ],
                         "range": [
                             100,
@@ -98,17 +108,6 @@
                     "legend": {
                         "format": ".1s"
                     }
-                },
-                "color": {
-                    "field": "Region",
-                    "type": "nominal"
-                },
-                "opacity": {
-                    "condition": {
-                        "selection": "region_highlight",
-                        "value": 0.6
-                    },
-                    "value": 0
                 },
                 "tooltip": [
                     {
@@ -144,6 +143,33 @@
                         "format": ","
                     }
                 ]
+            }
+        },
+        {
+            "mark": {
+                "type": "text",
+                "align": "left",
+                "baseline": "line-bottom",
+                "dx": 20,
+                "dy": 5,
+                "fontSize": 11.5,
+                "fontStyle": "italic"
+            },
+            "encoding": {
+                "text": {
+                    "field": "Country",
+                    "type": "nominal"
+                },
+                "color": {
+                    "value": "black"
+                },
+                "opacity": {
+                    "condition": {
+                        "test": "datum['Country'] == 'Iraq' || datum['Country'] == 'Afghanistan'",
+                        "value": 1
+                    },
+                    "value": 0
+                }
             }
         }
     ]
