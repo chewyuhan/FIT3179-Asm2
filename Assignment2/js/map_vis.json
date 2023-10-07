@@ -1,7 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Global Terrorism Index (2012-2022)",
-    "width": "container",
+    "width": 1080,
     "height": 500,
     "projection": {
         "type": "equalEarth"

@@ -55,7 +55,12 @@
             "encoding": {
                 "color": {
                     "field": "Region",
-                    "type": "nominal"
+                    "type": "nominal",
+                    "scale":{
+                        "domain":["Americas", "Africa", "Asia", "Oceania", "Europe"],
+                        "range": ["#7fc97f", "#beaed4", "#fdc086", "#ffff99", "#386cb0"]
+
+                    }
                 },
                 "opacity": {
                     "condition": {
