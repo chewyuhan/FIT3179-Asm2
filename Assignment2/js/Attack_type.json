@@ -1,22 +1,24 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 500,
+    "height": 300,
+    "title": "Terrorist Attack Types (2012-2022)",
     "data": {
       "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Assignment2/data/attack-type.csv"
     },
     "mark": "bar",
     "encoding": {
-      "x": {"field": "CATEGORY", "type": "ordinal", "axis": {"labelAngle": 45}},
-      "y": {"aggregate": "count", "type": "quantitative"},
-      "color": {"field": "CATEGORY", "type": "nominal", "scale": {"scheme": "set1"}},
+      "y": {"field": "CATEGORY", "type": "ordinal", "axis": {"labelAngle": 45}},
+      "x": {"aggregate": "count", "type": "quantitative"},
+      "color": {
+        "field": "CATEGORY",
+        "type": "nominal",
+        "scale": {"scheme": "set1"}
+      },
       "tooltip": [
         {"field": "CATEGORY", "type": "nominal"},
         {"aggregate": "count", "type": "quantitative"}
       ]
     },
-    "title": "Attack Types in 2012-2022",
-    "config": {
-      "view": {"stroke": "transparent"},
-      "axis": {"domainWidth": 1}
-    }
+    "config": {"view": {"stroke": "transparent"}, "axis": {"domainWidth": 1}}
   }
-  
