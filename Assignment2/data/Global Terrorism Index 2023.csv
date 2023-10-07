@@ -472,17 +472,17 @@ El Salvador,112,0,0,0,0,0,2019,0,Americas
 El Salvador,105,0,0,0,0,0,2020,0,Americas
 El Salvador,96,0,0,0,0,0,2021,1,Americas
 El Salvador,93,0,0,0,0,0,2022,,Americas
-Equatorial Guinea,112,0,0,0,0,0,2012,0,Africa
-Equatorial Guinea,110,0,0,0,0,0,2013,0,Africa
-Equatorial Guinea,110,0,0,0,0,0,2014,0,Africa
-Equatorial Guinea,106,0,0,0,0,0,2015,0,Africa
-Equatorial Guinea,106,0,0,0,0,0,2016,0,Africa
-Equatorial Guinea,108,0,0,0,0,0,2017,0,Africa
-Equatorial Guinea,110,0,0,0,0,0,2018,0,Africa
-Equatorial Guinea,112,0,0,0,0,0,2019,0,Africa
-Equatorial Guinea,105,0,0,0,0,0,2020,0,Africa
-Equatorial Guinea,96,0,0,0,0,0,2021,0,Africa
-Equatorial Guinea,93,0,0,0,0,0,2022,,Africa
+Eq. Guinea,112,0,0,0,0,0,2012,0,Africa
+Eq. Guinea,110,0,0,0,0,0,2013,0,Africa
+Eq. Guinea,110,0,0,0,0,0,2014,0,Africa
+Eq. Guinea,106,0,0,0,0,0,2015,0,Africa
+Eq. Guinea,106,0,0,0,0,0,2016,0,Africa
+Eq. Guinea,108,0,0,0,0,0,2017,0,Africa
+Eq. Guinea,110,0,0,0,0,0,2018,0,Africa
+Eq. Guinea,112,0,0,0,0,0,2019,0,Africa
+Eq. Guinea,105,0,0,0,0,0,2020,0,Africa
+Eq. Guinea,96,0,0,0,0,0,2021,0,Africa
+Eq. Guinea,93,0,0,0,0,0,2022,,Africa
 Eritrea,61,3.141192925,0,0,0,0,2012,0,Africa
 Eritrea,68,2.527927612,0,0,0,0,2013,0,Africa
 Eritrea,77,1.973786701,0,0,0,0,2014,0,Africa
@@ -1308,17 +1308,17 @@ Qatar,112,0,0,0,0,0,2019,0,Asia
 Qatar,105,0,0,0,0,0,2020,0,Asia
 Qatar,96,0,0,0,0,0,2021,0,Asia
 Qatar,93,0,0,0,0,0,2022,,Asia
-Republic of the Congo,112,0,0,0,0,0,2012,0,Africa
-Republic of the Congo,110,0,0,0,0,0,2013,1,Africa
-Republic of the Congo,110,0,0,0,0,0,2014,0,Africa
-Republic of the Congo,106,0,0,0,0,0,2015,0,Africa
-Republic of the Congo,106,0,0,0,0,0,2016,15,Africa
-Republic of the Congo,108,0,0,0,0,0,2017,0,Africa
-Republic of the Congo,110,0,0,0,0,0,2018,0,Africa
-Republic of the Congo,112,0,0,0,0,0,2019,0,Africa
-Republic of the Congo,105,0,0,0,0,0,2020,0,Africa
-Republic of the Congo,96,0,0,0,0,0,2021,0,Africa
-Republic of the Congo,93,0,0,0,0,0,2022,,Africa
+Congo,112,0,0,0,0,0,2012,0,Africa
+Congo,110,0,0,0,0,0,2013,1,Africa
+Congo,110,0,0,0,0,0,2014,0,Africa
+Congo,106,0,0,0,0,0,2015,0,Africa
+Congo,106,0,0,0,0,0,2016,15,Africa
+Congo,108,0,0,0,0,0,2017,0,Africa
+Congo,110,0,0,0,0,0,2018,0,Africa
+Congo,112,0,0,0,0,0,2019,0,Africa
+Congo,105,0,0,0,0,0,2020,0,Africa
+Congo,96,0,0,0,0,0,2021,0,Africa
+Congo,93,0,0,0,0,0,2022,,Africa
 Romania,112,0,0,0,0,0,2012,0,Europe
 Romania,110,0,0,0,0,0,2013,0,Europe
 Romania,110,0,0,0,0,0,2014,0,Europe
@@ -1462,17 +1462,17 @@ South Korea,109,0.226890594,0,0,0,0,2019,1,Asia
 South Korea,105,0,0,0,0,0,2020,0,Asia
 South Korea,96,0,0,0,0,0,2021,0,Asia
 South Korea,93,0,0,0,0,0,2022,,Asia
-South Sudan,112,0,0,0,0,0,2012,5,Africa
-South Sudan,48,3.747457604,2,6,7,0,2013,13,Africa
-South Sudan,49,3.599268308,2,2,0,0,2014,40,Africa
-South Sudan,45,4.072765431,6,1,0,31,2015,54,Africa
-South Sudan,55,3.481093126,0,0,0,0,2016,59,Africa
-South Sudan,65,2.896971243,0,0,0,0,2017,54,Africa
-South Sudan,77,2.17728451,0,0,0,0,2018,69,Africa
-South Sudan,86,1.534965117,0,0,0,0,2019,13,Africa
-South Sudan,105,0,0,0,0,0,2020,16,Africa
-South Sudan,96,0,0,0,0,0,2021,14,Africa
-South Sudan,93,0,0,0,0,0,2022,,Africa
+S. Sudan,112,0,0,0,0,0,2012,5,Africa
+S. Sudan,48,3.747457604,2,6,7,0,2013,13,Africa
+S. Sudan,49,3.599268308,2,2,0,0,2014,40,Africa
+S. Sudan,45,4.072765431,6,1,0,31,2015,54,Africa
+S. Sudan,55,3.481093126,0,0,0,0,2016,59,Africa
+S. Sudan,65,2.896971243,0,0,0,0,2017,54,Africa
+S. Sudan,77,2.17728451,0,0,0,0,2018,69,Africa
+S. Sudan,86,1.534965117,0,0,0,0,2019,13,Africa
+S. Sudan,105,0,0,0,0,0,2020,16,Africa
+S. Sudan,96,0,0,0,0,0,2021,14,Africa
+S. Sudan,93,0,0,0,0,0,2022,,Africa
 Spain,55,3.256669844,0,0,0,0,2012,1,Europe
 Spain,70,2.38683533,0,0,0,0,2013,5,Europe
 Spain,79,1.840478381,2,0,0,0,2014,4,Europe

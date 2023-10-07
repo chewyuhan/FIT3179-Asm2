@@ -62,7 +62,7 @@
         },
         {
             "data": {
-                "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Week_9_Homework/Global%20Terrorism%20Index%202023.csv",
+                "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Assignment2/data/Global%20Terrorism%20Index%202023.csv",
                 "format": {
                     "type": "csv"
                 }
