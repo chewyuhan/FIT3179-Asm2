@@ -1,13 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <!-- Import Vega & Vega-Lite (does not have to be from CDN) -->
   <script src="https://cdn.jsdelivr.net/npm/vega@5.22.1"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.2.0"></script>
   <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.20.8"></script>
-
-  <!-- CSS file -->
   <link rel="stylesheet" type="text/css" href="css/styles.css" media="all">
 </head>
 
@@ -16,21 +13,34 @@
     <header>
       <h1>Data Visualizations: Global Terrorism Insights (2012-2022)</h1>
     </header>
+    <div class="des">
+      <p>
+        From 2012 to 2022, the global landscape has witnessed a sobering reality marked by <strong>47,873 terrorist incidents</strong>
+        resulting in a staggering <strong>133,738 injuries</strong>. This tumultuous period has been characterized by diverse forms
+        of violence, ranging from bombings and assaults to hostage situations. The sheer magnitude of incidents underscores the
+        persistent threat posed by terrorism worldwide. Examining this tumultuous decade reveals intricate patterns, regional
+        disparities, and the evolving nature of these attacks. As we delve into the data, it becomes evident that the impact of
+        terrorism extends beyond the immediate casualties, leaving a lasting imprint on geopolitical dynamics and global security.
+        Understanding the nuances of these incidents is crucial for formulating effective counterterrorism strategies and fostering
+        international collaboration to address the root causes of extremism.
+      </p>
+    </div>
+
     <div class="map">
       <div class="topic">
         <h1>Geographical Distribution on Global Terrorist Index</h1>
+        <p> <strong>Year Slider</strong> can control the year that shows an interesting trend
+          regarding the Global Terrorist Score.
+        </p>
       </div>
       <div class="des">
         <p>
           In the turbulent narrative of global terrorism spanning the years <strong>2012 to 2022</strong>, our
-          interactive map unveils a chilling tale. <br><br>
+          interactive map unveils a chilling tale.
 
           <em>Afghanistan, Iraq, and Syria</em> emerge as perennial protagonists in this saga of unrest, their
           consistent high
           scores painting a vivid picture of enduring challenges.<br><br>
-
-          Users can play with the <strong>Year Slider</strong> to control the year that shows an interesting trend
-          regarding the Global Terrorist Score.
         </p>
 
         <div id="choropleth_map" class="vis-container" style="text-align: center;"></div>
@@ -39,41 +49,70 @@
     <div class="bubble-plot">
       <div class="topic">
         <h1>Global Terrorist Attack Per Country</h1>
-        <p>Terrorist Attack Slider can be used to control the parameter of the Number of Terrorist Attack</p>
-        <p>Region in the legend can be used to filter out region</p>
-
-
+        <p><b>Attack Slider</b> can be used to control the parameter of the <b>Number of Terrorist Attack</b></p>
+        <p><b>Region in the legend</b> can be used to <b>filter</b> out region</p>
       </div>
       <div class="container">
         <div id="bubble" class="vis-container"></div>
         <div class="des">
           <p>
-            The data on terrorist attacks highlights a <strong>persistent threat</strong> in Asia,
-            particularly in countries like <em>Afghanistan, Iraq, Nigeria, Pakistan, Somalia, and Syria</em>. <br><br>
+            The data on terrorist attacks paints a picture of a <strong>persistent threat</strong> in Asia, with
+            countries such as
+            <em>Afghanistan, Iraq, Nigeria, Pakistan, Somalia, and Syria</em> experiencing heightened incidents. The
+            region is marked by
+            <strong>fluctuations in attack frequency</strong>, reflecting the <strong>evolving geopolitical
+              dynamics</strong>. Notably,
+            <em>Iraq, Afghanistan, Nigeria, and Syria</em> consistently bear the brunt, facing high levels of
+            <strong>fatalities and
+              injuries</strong>, underscoring the severe impact of terrorism on these nations.<br><br>
 
-            Fluctuations in attack frequency indicate <strong>evolving geopolitical dynamics</strong>. <em>Iraq,
-            Afghanistan, Nigeria, and Syria</em> consistently face high <strong>fatalities and injuries</strong>, 
-            emphasizing the severe impact of terrorism.<br><br>
+            The prevalence of <strong>hostage situations</strong> in <em>Afghanistan, Iraq, and Syria</em> further adds
+            complexity to
+            the security challenges faced by these countries. These incidents highlight the multifaceted nature of
+            terrorist activities
+            and the need for comprehensive strategies to address the various dimensions of these threats.<br><br>
 
-            Hostage situations, notably in <em>Afghanistan, Iraq, and Syria</em>, add complexity to security
-            challenges.<br><br>
-
-            <strong>Emerging hotspots</strong>
-            like <em>Mali, Burkina Faso, and Mozambique</em> signify the evolving global terrorism landscape. Despite
-            international efforts, sustained collaboration
-            is crucial to address root causes and effectively combat terrorism globally.
-
+            Furthermore, <strong>emerging hotspots</strong> in regions like <em>Mali, Burkina Faso, and Mozambique</em>
+            signify the
+            evolving global terrorism landscape. Despite international efforts, sustained collaboration remains crucial
+            to address
+            root causes and effectively combat terrorism on a global scale.
           </p>
         </div>
       </div>
+    </div>
 
+    <div class="bar-plot">
+      <div class="topic">
+        <h1>Type of Terrorist Attack</h1>
+        <p>Region can be selected using the <b>"Region Selection"</b></p>
+      </div>
       <div class="container">
-        <div id="bar" class="vis-container"></div>
         <div class="des">
+          <p><strong>From 2012 to 2022</strong>, global terrorist attacks varied, with "<strong>Explosion</strong>"
+            being predominant in <strong>274 incidents</strong>, followed by "<strong>Assault</strong>" with <strong>132
+              incidents</strong>. "<strong>Assault,Explosion</strong>" occurred in <strong>37 instances</strong>, and
+            <strong>Hostage</strong> events were recorded in <strong>9 cases</strong>. Complex attacks like
+            "<strong>Assault,Explosion,Hostage</strong>" were documented <strong>6 times</strong>, and explosions paired
+            with accidents were noted in <strong>2 occurrences</strong>.
+          </p>
+
+          <h2>Global Distribution</h2>
+          <p>Regionally, "<strong>Explosion</strong>" and "<strong>Assault</strong>" were prominent in the
+            <strong>Americas</strong>, <strong>Asia</strong>, <strong>Africa</strong>, <strong>Europe</strong>, and
+            <strong>Oceania</strong>. Notably, <strong>Asia</strong> witnessed <strong>195 Explosion incidents</strong>,
+            and <strong>Europe</strong> had a higher proportion of "<strong>Assault</strong>" types totaling <strong>32
+              incidents</strong>. In <strong>Oceania</strong>, incidents were limited, with "<strong>Assault</strong>"
+            and "<strong>Hostage</strong>" occurring <strong>2 and 1 times</strong>, respectively.
+          </p>
+
+          <p>This summary provides insights into the varied nature of terrorist attacks across regions during the
+            specified period.</p>
         </div>
+        <div id="bar" class="vis-container"></div>
+      </div>
     </div>
   </div>
-
 
   <script type="text/javascript">
     var spec1 = "js/map_vis.json";
@@ -107,11 +146,7 @@
     }).catch((err) => {
 
     });
-
-
-
   </script>
-
 </body>
 
 </html>
