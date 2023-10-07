@@ -1,0 +1,72 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Median house price per suburb (2010-2020)",
+    "repeat": [
+        "Injuries",
+        "Hostages",
+        "Fatalities",
+        "Incidents"
+    ],
+    "columns": 2,
+    "width": 400,
+    "height": 300
+    "layer": [
+        {
+            "data": {
+                "url": "https://raw.githubusercontent.com/KaneSec/vega_lite/main/6_advanced_examples/data/house_price_by_suburb_wide_format.csv"
+            },
+            "mark": {
+                "type": "circle"
+            },
+            "encoding": {
+                "x": {"title": "Fatalities", "field": "Fatalities", "type": "quantitative"},
+                "y": {"title": "Injuries", "field": "Injuries", "type": "quantitative"},
+                "color": {
+                    "field": {
+                        "repeat": "repeat"
+                    },
+                    "type": "quantitative",
+                    "scale": {
+                        "domain": [
+                            400000,
+                            1800000
+                        ],
+                        "scheme": "reds"
+                    },
+                    "legend": {
+                        "format": ".2s",
+                        "title": "Median price"
+                    }
+                }
+            }
+        },
+        {
+            "data": {
+                "values": [
+                    {
+                        "Injuries": "Injuries",
+                        "Hostages": "Hostages",
+                        "Fatalities": "Fatalities",
+                        "Incidents": "Incidents"
+                    }
+                ]
+            },
+            "mark": {
+                "type": "text",
+                "align": "right",
+                "baseline": "bottom",
+                "x": "width",
+                "y": 0
+            },
+            "encoding": {
+                "text": {
+                    "field": {
+                        "repeat": "repeat"
+                    }
+                }
+            }
+        }
+    ]
+},
+"config": {}
+}
