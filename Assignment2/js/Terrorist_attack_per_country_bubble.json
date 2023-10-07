@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 900,
+    "width": 800,
     "height": 500,
     "data": {
         "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Assignment2/data/Global%20Terrorism%20Index%202023.csv"
@@ -16,37 +16,11 @@
                 "step": 250,
                 "name": "Terrorist Attacks: "
             }
-        },
-        {
-            "name": "Region_selection",
-            "bind": {
-                "input": "select",
-                "options": [
-                    null,
-                    "Americas",
-                    "Europe",
-                    "Africa",
-                    "Asia",
-                    "Oceania"
-                ],
-                "labels": [
-                    "Show All",
-                    "Americas",
-                    "Europe",
-                    "Africa",
-                    "Asia",
-                    "Oceania"
-                ],
-                "name": "Region Selection: "
-            }
         }
     ],
     "transform": [
         {
             "filter": "datum.Terrorist_attacks > Terrorist_attacks"
-        },
-        {
-            "filter": "Region_selection == null || datum.Region == Region_selection"
         }
     ],
     "encoding": {
@@ -165,7 +139,7 @@
                 },
                 "opacity": {
                     "condition": {
-                        "test": "datum['Country'] == 'Iraq' || datum['Country'] == 'Afghanistan'",
+                        "test": "datum['Country'] == 'Iraq' || datum['Country'] == 'Afghanistan'|| datum['Country'] == 'Mozambique'",
                         "value": 1
                     },
                     "value": 0
