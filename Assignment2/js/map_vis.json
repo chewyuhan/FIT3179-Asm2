@@ -24,7 +24,6 @@
             "bind": {
                 "input": "select",
                 "options": [
-                    "Rank",
                     "Score",
                     "Incidents",
                     "Fatalities",
@@ -106,7 +105,7 @@
                     "field": "Score",
                     "type": "quantitative",
                     "scale": {
-                        "scheme": "viridis"
+                        "range": ["#ffffb2", "#fecc5c", "#fd8d3c", "#f03b20", "#bd0026"]                    
                     }
                 },
                 "tooltip": [
