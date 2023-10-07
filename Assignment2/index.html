@@ -66,6 +66,11 @@
           </p>
         </div>
       </div>
+
+      <div class="container">
+        <div id="bar" class="vis-container"></div>
+        <div class="des">
+        </div>
     </div>
   </div>
 
@@ -73,6 +78,7 @@
   <script type="text/javascript">
     var spec1 = "js/map_vis.json";
     var spec2 = "js/Terrorist_attack_per_country_bubble.json";
+    var spec3 = "js/Attack_type.json"
 
     vegaEmbed('#choropleth_map', spec1, {
       actions: false
@@ -87,6 +93,14 @@
     });
 
     vegaEmbed('#choropleth_map', spec1, {
+      actions: false
+    }).then((result) => {
+
+    }).catch((err) => {
+
+    });
+
+    vegaEmbed('#bar', spec3, {
       actions: false
     }).then((result) => {
 
