@@ -2,42 +2,74 @@
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "width": 500,
     "height": 300,
-    "title": {"text": "Terrorist Attack Types (2012-2022)", "subtitle": {"signal": "'Region: ' + datum.Region"}},
+    "title": "Terrorist Attack Types (2012-2022)",
     "params": [
-      {
-        "name": "Region_selection",
-        "value": "Show All",
-        "bind": {
-          "input": "select",
-          "options": ["Show All", "Americas", "Africa", "Asia", "Oceania", "Europe"],
-          "name": "Region Selection: "
+        {
+            "name": "Region_selection",
+            "value": "Show All",
+            "bind": {
+                "input": "select",
+                "options": [
+                    "Show All",
+                    "Americas",
+                    "Africa",
+                    "Asia",
+                    "Oceania",
+                    "Europe"
+                ],
+                "name": "Region Selection: "
+            }
         }
-      }
     ],
     "data": {
-      "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Assignment2/data/attack-type.csv"
+        "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Assignment2/data/attack-type.csv"
     },
     "transform": [
-      {"filter": "datum.REGION === Region_selection || Region_selection === 'Show All'"}
+        {
+            "filter": "datum.REGION === Region_selection || Region_selection === 'Show All'"
+        }
     ],
     "layer": [
-      {
-        "mark": "bar",
-        "encoding": {
-          "y": {"field": "CATEGORY", "type": "ordinal", "axis": {"labelAngle": 45}},
-          "x": {"aggregate": "count", "type": "quantitative"},
-          "color": {
-            "field": "CATEGORY",
-            "type": "nominal",
-            "scale": {"scheme": "set1"}
-          },
-          "tooltip": [
-            {"field": "CATEGORY", "type": "nominal"},
-            {"aggregate": "count", "type": "quantitative"}
-          ]
+        {
+            "mark": "bar",
+            "encoding": {
+                "y": {
+                    "field": "CATEGORY",
+                    "type": "ordinal",
+                    "axis": {
+                        "labelAngle": 45
+                    }
+                },
+                "x": {
+                    "aggregate": "count",
+                    "type": "quantitative"
+                },
+                "color": {
+                    "field": "CATEGORY",
+                    "type": "nominal",
+                    "scale": {
+                        "scheme": "set1"
+                    }
+                },
+                "tooltip": [
+                    {
+                        "field": "CATEGORY",
+                        "type": "nominal"
+                    },
+                    {
+                        "aggregate": "count",
+                        "type": "quantitative"
+                    }
+                ]
+            }
         }
-      }
     ],
-    "config": {"view": {"stroke": "transparent"}, "axis": {"domainWidth": 1}}
-  }
-  
+    "config": {
+        "view": {
+            "stroke": "transparent"
+        },
+        "axis": {
+            "domainWidth": 1
+        }
+    }
+}

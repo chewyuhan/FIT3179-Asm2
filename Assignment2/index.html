@@ -48,7 +48,7 @@
     </div>
     <div class="bubble-plot">
       <div class="topic">
-        <h1>Global Terrorist Attack Per Country</h1>
+        <h1>Number of Terrorist Attack Per Country</h1>
         <p><b>Attack Slider</b> can be used to control the parameter of the <b>Number of Terrorist Attack</b></p>
         <p><b>Region in the legend</b> can be used to <b>filter</b> out region</p>
       </div>
@@ -112,12 +112,42 @@
         <div id="bar" class="vis-container"></div>
       </div>
     </div>
+
+    <div class="circle-plot">
+      <div class="topic">
+        <h1>Type of Terrorist Attack</h1>
+        <p><b>Region in the legend</b> can be used to <b>filter</b> out region</p>
+      </div>
+      <div class="container">
+        <div id="circle" class="vis-container"></div>
+
+        <div class="des">
+          <p>
+            The examination of <strong>Terrorist Score</strong> versus scores for different incident 
+            types unveils distinctive regional patterns. In the realm of <strong>Injuries</strong>, 
+            <em>Africa</em> and <em>Asia</em> stand out with elevated <strong>Terrorist Scores</strong>, 
+            signaling heightened terrorist activities resulting in <strong>injuries</strong>. <strong>Hostages</strong> 
+            present a similar narrative, with <em>Africa</em> and <em>Asia</em> experiencing significant impacts. 
+            <strong>Fatalities</strong> follow suit, with <em>Africa</em> leading in the severity of terrorist incidents.
+          </p><br><br>
+          
+          <p>
+            The <strong>Incidents</strong> category underscores <em>Africa</em>'s higher overall impact, 
+            especially when considering the broader spectrum of terrorist activities. These insights highlight 
+            regional variations in the nature and intensity of terrorist threats, emphasizing the need for nuanced 
+            counterterrorism strategies tailored to specific challenges in each region.
+          </p>
+          
+        </div>
+      </div>
+    </div>
   </div>
 
   <script type="text/javascript">
     var spec1 = "js/map_vis.json";
     var spec2 = "js/Terrorist_attack_per_country_bubble.json";
     var spec3 = "js/Attack_type.json"
+    var spec4 = "js/Score_vs_other.json"
 
     vegaEmbed('#choropleth_map', spec1, {
       actions: false
@@ -140,6 +170,14 @@
     });
 
     vegaEmbed('#bar', spec3, {
+      actions: false
+    }).then((result) => {
+
+    }).catch((err) => {
+
+    });
+
+    vegaEmbed('#circle', spec4, {
       actions: false
     }).then((result) => {
 
