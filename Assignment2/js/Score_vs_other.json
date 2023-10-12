@@ -36,6 +36,23 @@
           "range": ["#e41a1c", "#377eb8", "#4daf4a", "#984ea3", "#ff7f00"]
         }
       },
+      "tooltip":[
+        {
+            "field": "Region",
+            "type": "nominal",
+            "title": "Region"
+        },
+        {
+            "field": "Terrorist-Score",
+            "type": "quantitative",
+            "title": "Terrorist Score"        
+          },
+        {
+            "field": "Score",
+            "type": "quantitative",
+            "title": "Score"
+        }
+    ],
       "opacity": {
         "condition": {"selection": "region_highlight", "value": 0.6},
         "value": 0.1

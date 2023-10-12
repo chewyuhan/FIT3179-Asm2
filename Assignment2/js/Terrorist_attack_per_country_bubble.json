@@ -36,6 +36,7 @@
         "y": {
             "field": "Terrorist_attacks",
             "type": "quantitative",
+            "title":"Terrorist Attack",
             "axis": {
                 "tickCount": 6
             }

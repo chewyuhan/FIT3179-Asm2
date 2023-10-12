@@ -36,6 +36,7 @@
                 "y": {
                     "field": "CATEGORY",
                     "type": "ordinal",
+                    "title": "Category",
                     "axis": {
                         "labelAngle": 45
                     }
