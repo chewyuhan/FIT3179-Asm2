@@ -1,6 +1,6 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Trends by Type and Region",
+    "title": "Trend by Terrorist Score and Indicator Score",
     "width": 400,
     "height": 130,
     "data": {
