@@ -146,6 +146,74 @@
                     }
                 ]
             }
+        },
+        {
+            "data": {
+                "values": [
+                    {
+                        "Country": "Iraq",
+                        "longitude": 44,
+                        "latitude": 33,
+                        "text": "Iraq"
+                    },
+                    {
+                        "Country": "United States",
+                        "longitude": -98.5,
+                        "latitude": 39.8,
+                        "text": "United States"
+                    },
+                    {
+                        "Country": "China",
+                        "longitude": 104,
+                        "latitude": 35,
+                        "text": "China"
+                    },
+                    {
+                        "Country": "Malaysia",
+                        "longitude": 109,
+                        "latitude": 4,
+                        "text": "Malaysia"
+                    },
+                    {
+                        "Country": "Australia",
+                        "longitude": 133,
+                        "latitude": -27,
+                        "text": "Australia"
+                    },
+                    {
+                        "Country": "Somalia",
+                        "longitude": 47.7,
+                        "latitude": 5.8,
+                        "text": "Somalia"
+                    },
+                    {
+                        "Country": "Colombia",
+                        "longitude": -74,
+                        "latitude": 4,
+                        "text": "Colombia"
+                    }
+                ]
+            },
+            "mark": {
+                "type": "text",
+                "align": "center",
+                "baseline": "middle",
+                "fontWeight": "bold"
+            },
+            "encoding": {
+                "longitude": {
+                    "field": "longitude",
+                    "type": "quantitative"
+                },
+                "latitude": {
+                    "field": "latitude",
+                    "type": "quantitative"
+                },
+                "text": {
+                    "field": "text",
+                    "type": "nominal"
+                }
+            }
         }
     ],
     "config": {
