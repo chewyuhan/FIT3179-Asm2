@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Trend by Terrorist Score and Indicator Score",
-    "width": 400,
-    "height": 130,
+    "width": 250,
+    "height": 180,
     "data": {
       "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Assignment2/data/Sum_of_variables.csv"
     },
