@@ -76,6 +76,32 @@
         },
         {
             "data": {
+                "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Assignment2/data/ne_110m_graticules_30.topojson",
+                "format": {
+                    "type": "topojson",
+                    "feature": "ne_110m_graticules_30"
+                }
+            },
+            "transform": [
+                {
+                    "calculate": "'Graticule'",
+                    "as": "note"
+                }
+            ],
+            "mark": {
+                "type": "geoshape",
+                "stroke": "#ddd",
+                "strokeWidth": 0.5,
+                "fill": null
+            },
+            "encoding": {
+                "tooltip": {
+                    "field": "note"
+                }
+            }
+        },
+        {
+            "data": {
                 "url": "https://raw.githubusercontent.com/chewyuhan/FIT3179-Asm2/main/Assignment2/data/Global%20Terrorism%20Index%202023.csv",
                 "format": {
                     "type": "csv"
