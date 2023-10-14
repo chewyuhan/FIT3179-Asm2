@@ -90,8 +90,8 @@
             ],
             "mark": {
                 "type": "geoshape",
-                "stroke": "#ddd",
-                "strokeWidth": 0.5,
+                "stroke": "grey",
+                "strokeWidth": 1,
                 "fill": null
             },
             "encoding": {
